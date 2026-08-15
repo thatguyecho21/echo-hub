@@ -1,8 +1,8 @@
 local Rayfield = loadstring(game:HttpGet("https://sirius.menu/gen2"))()
 
 local window = Rayfield:CreateWindow({
-    name = "Example Hub",
-    subtitle = "Rayfield Gen2",
+    name = "ECHO HUB | RESIDENCE MASSACRE",
+    subtitle = "Supports all nights/modifiers/memories!",
     theme = "frost",
 })
 
