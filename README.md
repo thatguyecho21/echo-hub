@@ -1,2 +1,2 @@
 # echo-hub
-just testing. who knows?
+Just a guy testing some roblox code.
