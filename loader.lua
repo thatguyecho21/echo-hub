@@ -11,6 +11,6 @@ local loader = window:CreateTab({ name = "Loader", icon = "settings" })
 loader:CreateButton({
     name = "Residence Massacre",
     callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/thatguyecho21/echo-hub/refs/heads/main/RM.lua"))()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/thatguyecho21/echo-hub/refs/heads/main/Games/RM.lua"))()
     end,
 })
