@@ -1,3 +1,7 @@
+if getgenv().OldRayfield then
+    getgenv().OldRayfield:Destroy()
+end
+
 local Rayfield = loadstring(game:HttpGet("https://sirius.menu/gen2"))()
 
 local window = Rayfield:CreateWindow({
