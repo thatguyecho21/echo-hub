@@ -9,7 +9,7 @@ local window = Rayfield:CreateWindow({
     subtitle = "Click a button and it will launch the script.",
 })
 
-local loader = window:CreateTab({ name = "Loader", icon = "93364949241311" })
+local loader = window:CreateTab({ name = "Loader", icon = nil })
 
 loader:CreateButton({
     name = "Residence Massacre",
