@@ -1,11 +1,22 @@
+--// Loader \\--
+
 local WindUI = loadstring(game:HttpGet("https://raw.githubusercontent.com/Footagesus/WindUI/main/dist/main.lua"))()
+
+--// Variables \\--
+
+local configName = "Default"
+
+--// Window \\--
 
 local Window = WindUI:CreateWindow({
     Title = "My Hub",
     Icon = "star",
-    Theme = "Dark",
+    Theme = "Midnight",
     Folder = "MyHub",
+    HideSearchBar = false
 })
+
+--// Tabs \\--
 
 local Tab = Window:Tab({
     Title = "Main",
@@ -16,6 +27,8 @@ local Settings = Window:Tab({
     Title = "Settings", 
     Icon = "settings" 
 })
+
+--// Main \\--
 
 Tab:Toggle({
     Title = "Enable Feature",
@@ -55,6 +68,71 @@ Tab:Dropdown({
     end,
 })
 
+--// Settings \\--
+
+SettingsTab:Section({Title = "Configuration Manager"})
+
+SettingsTab:Input({
+    Title = "Config Name",
+    Value = configName,
+    Placeholder = "Type config name here...",
+    Callback = function(text)
+        configName = text
+    end
+})
+
+SettingsTab:Button({
+    Title = "Save Configuration",
+    Icon = "save",
+    Callback = function()
+        Window:SaveConfig(configName)
+        WindUI:Notify({
+            Title = "Config Saved",
+            Content = "Config '" .. configName .. "' has been saved.",
+            Duration = 3
+        })
+    end
+})
+
+SettingsTab:Button({
+    Title = "Load Configuration",
+    Icon = "folder-open",
+    Callback = function()
+        Window:LoadConfig(configName)
+        WindUI:Notify({
+            Title = "Config Loaded",
+            Content = "Config '" .. configName .. "' loaded successfully.",
+            Duration = 3
+        })
+    end
+})
+
+SettingsTab:Button({
+    Title = "Delete Configuration",
+    Icon = "trash-2",
+    Callback = function()
+        local folderPath = Window.Folder or "MyHub"
+        local filePath = folderPath .. "/" .. configName .. ".json"
+        
+        if isfile and isfile(filePath) then
+            delfile(filePath)
+            WindUI:Notify({
+                Title = "Config Deleted",
+                Content = "Config '" .. configName .. "' was completely deleted.",
+                Duration = 3
+            })
+        else
+            WindUI:Notify({
+                Title = "Error",
+                Content = "Could not find a config named '" .. configName .. "'.",
+                Duration = 3
+            })
+        end
+    end
+})
+
+SettingsTab:Section({Title = "Theme Picker"})
+
 Settings:Dropdown({
     Title  = "Theme",
     Values = (function()
@@ -70,6 +148,8 @@ Settings:Dropdown({
         WindUI:SetTheme(selected)
     end,
 })
+
+--// Notifications \\--
 
 WindUI:Notify({
     Title = "Hub Loaded",
