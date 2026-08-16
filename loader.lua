@@ -137,7 +137,7 @@ Settings:Dropdown({
     Title  = "Theme",
     Values = (function()
         local names = {}
-        for name in pairs(WindUI:GetThemes()) do
+        for name in pairs(WindUI:GetThemesList()) do
             table.insert(names, name)
         end
         table.sort(names)
