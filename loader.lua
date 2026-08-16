@@ -17,7 +17,7 @@ local Window = WindUI:CreateWindow({
     HideSearchBar = false,
     User = {
         Enabled = true,
-        Anonymous = true,
+        Anonymous = false,
     }
 })
 
