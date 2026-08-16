@@ -9,7 +9,8 @@ local configName = "Default"
 --// Window \\--
 
 local Window = WindUI:CreateWindow({
-    Title = "My Hub",
+    Title = "ECHO HUB",
+    Author = "[GAME NAME]",
     Icon = "star",
     Theme = "Dark",
     Folder = "MyHub",
@@ -20,7 +21,7 @@ local Window = WindUI:CreateWindow({
 
 local Tab = Window:Tab({
     Title = "Main",
-    Icon = "home",
+    Icon = "list",
 })
 
 local Settings = Window:Tab({
