@@ -1,19 +1,29 @@
-if Rayfield then
-    Rayfield:Destroy()
+if _G.Rayfield then
+    _G.Rayfield:Destroy()
+    _G.Rayfield = nil
 end
 
-local Rayfield = loadstring(game:HttpGet("https://sirius.menu/gen2"))()
+local Rayfield = loadstring(game:HttpGet("https://sirius.menu"))()
+_G.Rayfield = Rayfield
 
 local window = Rayfield:CreateWindow({
     name = "ECHO HUB | LOADER",
     subtitle = "Click a button and it will launch the script.",
 })
 
-local loader = window:CreateTab({ name = "Loader", icon = nil })
+local loader = window:CreateTab({ 
+    name = "Loader", 
+    icon = false 
+})
 
 loader:CreateButton({
     name = "Residence Massacre",
     callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/thatguyecho21/echo-hub/refs/heads/main/Games/RM.lua"))()
+        local success, err = pcall(function()
+            loadstring(game:HttpGet("https://githubusercontent.com"))()
+        end)
+        if not success then
+            warn("Failed to load script: " .. tostring(err))
+        end
     end,
 })
