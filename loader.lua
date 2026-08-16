@@ -70,9 +70,9 @@ Tab:Dropdown({
 
 --// Settings \\--
 
-SettingsTab:Section({Title = "Configuration Manager"})
+Settings:Section({Title = "Configuration Manager"})
 
-SettingsTab:Input({
+Settings:Input({
     Title = "Config Name",
     Value = configName,
     Placeholder = "Type config name here...",
@@ -81,7 +81,7 @@ SettingsTab:Input({
     end
 })
 
-SettingsTab:Button({
+Settings:Button({
     Title = "Save Configuration",
     Icon = "save",
     Callback = function()
@@ -94,7 +94,7 @@ SettingsTab:Button({
     end
 })
 
-SettingsTab:Button({
+Settings:Button({
     Title = "Load Configuration",
     Icon = "folder-open",
     Callback = function()
@@ -107,7 +107,7 @@ SettingsTab:Button({
     end
 })
 
-SettingsTab:Button({
+Settings:Button({
     Title = "Delete Configuration",
     Icon = "trash-2",
     Callback = function()
@@ -131,7 +131,7 @@ SettingsTab:Button({
     end
 })
 
-SettingsTab:Section({Title = "Theme Picker"})
+Settings:Section({Title = "Theme Picker"})
 
 Settings:Dropdown({
     Title  = "Theme",
