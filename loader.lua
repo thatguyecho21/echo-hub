@@ -21,7 +21,6 @@ Tab:Toggle({
     end,
 })
 
-
 -- Button
 Tab:Button({
     Title = "Run Action",
