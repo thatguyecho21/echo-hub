@@ -12,6 +12,11 @@ local Tab = Window:Tab({
     Icon = "home",
 })
 
+local Tab2 = Window:Tab({
+    Title = "Main",
+    Icon = "home",
+})
+
 Tab:Toggle({
     Title = "Enable Feature",
     Value = false,
@@ -20,7 +25,7 @@ Tab:Toggle({
     end,
 })
 
-Tab:Button({
+Tab2:Button({
     Title = "Run Action",
     Icon = "play",
     Callback = function()
@@ -41,7 +46,7 @@ Tab:Slider({
     end,
 })
 
-Tab:Dropdown({
+Tab2:Dropdown({
     Title = "Select Team",
     Values = { "Red", "Blue", "Green" },
     Value = 1,
