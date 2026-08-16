@@ -135,15 +135,8 @@ Settings:Section({ Title = "Theme Picker" })
 
 Settings:Dropdown({
     Title  = "Theme",
-    Values = (function()
-        local names = {}
-        for name in pairs(WindUI:GetThemesList()) do
-            table.insert(names, name)
-        end
-        table.sort(names)
-        return names
-    end)(),
-    Value    = WindUI:GetCurrentTheme(),
+    Values = { "Dark", "Light", "Rose", "Plant", "Red", "Indigo", "Sky", "Violet", "Amber", "Midnight", "Crimson", "Monokai Pro" },
+    Value  = 3,
     Callback = function(selected)
         WindUI:SetTheme(selected)
     end,
