@@ -132,28 +132,10 @@ Settings:Button({
 })
 
 Settings:Button({
-    Title = "Delete Configuration",
+    Title = "Dhello",
     Icon = "trash-2",
     Callback = function()
-        local folderPath = Window.Folder or "MyHub"
-        local filePath = folderPath .. "/" .. configName .. ".json"
-        
-        if isfile and isfile(filePath) then
-            delfile(filePath)
-            WindUI:Notify({
-                Title = "Config Deleted",
-                Content = "Config '" .. configName .. "' was completely deleted.",
-                Duration = 3
-            })
-        else
-            WindUI:Notify({
-                Title = "Error",
-                Content = "Could not find a config named '" .. configName .. "'.",
-                Duration = 3
-            })
-        end
-    end
-})
+            print("Hello world")
 
 Settings:Section({ Title = "Theme Picker" })
 
