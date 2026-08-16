@@ -1,18 +1,5 @@
-local guiContainer
-
-if typeof(gethui) == "function" then
-    local ok, result = pcall(gethui)
-    if ok and result then
-        guiContainer = result
-    end
-end
-
-guiContainer = guiContainer or game:GetService("CoreGui")
-
-for _, gui in ipairs(guiContainer:GetChildren()) do
-    if gui:IsA("ScreenGui") then
-        gui:Destroy()
-    end
+if Rayfield then
+    Rayfield:Destroy()
 end
 
 local Rayfield = loadstring(game:HttpGet("https://sirius.menu/gen2"))()
