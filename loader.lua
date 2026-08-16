@@ -16,15 +16,8 @@ local Window = WindUI:CreateWindow({
     Folder = "MyHub",
     HideSearchBar = false,
     User = {
-        Enabled = true,        -- Turns the card on at the bottom of the tabs
-        Anonymous = false,     -- If true, it hides your real name. Set false to see your Roblox name!
-        Callback = function()  -- Runs code if someone clicks on their own face card
-            WindUI:Notify({
-                Title = "Profile Card",
-                Content = "You clicked your user profile!",
-                Duration = 3
-            })
-        end
+        Enabled = true,
+        Anonymous = true,
     }
 })
 
