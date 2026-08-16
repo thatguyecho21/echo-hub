@@ -30,7 +30,7 @@ local Tab = Window:Tab({
 
 local Settings = Window:Tab({
     Title = "Settings", 
-    Icon = "settings" 
+    Icon = "settings",
 })
 
 --// Main \\--
