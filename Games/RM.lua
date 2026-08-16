@@ -1,32 +1,28 @@
-local guiContainer
-
-if typeof(gethui) == "function" then
-    local ok, result = pcall(gethui)
-    if ok and result then
-        guiContainer = result
-    end
-end
-
-guiContainer = guiContainer or game:GetService("CoreGui")
-
-for _, gui in ipairs(guiContainer:GetChildren()) do
-    if gui:IsA("ScreenGui") then
-        gui:Destroy()
-    end
+if Rayfield then
+    Rayfield:Destroy()
 end
 
 local Rayfield = loadstring(game:HttpGet("https://sirius.menu/gen2"))()
 
 local window = Rayfield:CreateWindow({
-    name = "ECHO HUB | LOADER",
-    subtitle = "Click a button and it will launch the script.",
+    name = "ECHO HUB",
+    subtitle = "RESIDENCE MASSACRE SCRIPT",
 })
 
-local loader = window:CreateTab({ name = "Loader", icon = "93364949241311" })
+local n1 = window:CreateTab({ name = "Night 1", icon = "93364949241311" })
+local n2 = window:CreateTab({ name = "Night 2", icon = "93364949241311" })
+local n3 = window:CreateTab({ name = "Night 3", icon = "93364949241311-unit" })
 
-loader:CreateButton({
-    name = "Residence Massacre",
+n1:CreateButton({
+    name = "Say hello",
     callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/thatguyecho21/echo-hub/refs/heads/main/Games/RM.lua"))()
+        window:Notify({ title = "Hello", content = "Your first element works." })
+    end,
+})
+
+n1:CreateToggle({
+    name = "Auto Sprint",
+    callback = function(value)
+        print("Auto Sprint:", value)
     end,
 })
