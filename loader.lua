@@ -21,7 +21,6 @@ Tab:Toggle({
     end,
 })
 
-Tab:Space()
 
 -- Button
 Tab:Button({
