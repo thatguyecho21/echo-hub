@@ -136,6 +136,8 @@ Settings:Button({
     Icon = "trash-2",
     Callback = function()
             print("Hello world")
+    end
+})
 
 Settings:Section({ Title = "Theme Picker" })
 
@@ -145,7 +147,7 @@ Settings:Dropdown({
     Value  = 1,
     Callback = function(selected)
         WindUI:SetTheme(selected)
-    end,
+    end
 })
 
 --// Notifications \\--
