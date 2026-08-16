@@ -70,7 +70,7 @@ Tab:Dropdown({
 
 --// Settings \\--
 
-Settings:Section({Title = "Configuration Manager"})
+Settings:Section({ Title = "Configuration Manager" })
 
 Settings:Input({
     Title = "Config Name",
@@ -131,7 +131,7 @@ Settings:Button({
     end
 })
 
-Settings:Section({Title = "Theme Picker"})
+Settings:Section({ Title = "Theme Picker" })
 
 Settings:Dropdown({
     Title  = "Theme",
