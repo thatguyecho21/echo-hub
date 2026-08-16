@@ -1,12 +1,17 @@
-local CoreGui = game:GetService("CoreGui")
+local guiContainer
 
-for _, v in ipairs(CoreGui:GetChildren()) do
-    if v:IsA("ScreenGui") then
-        pcall(function()
-            if v:FindFirstChild("Rayfield") or v.Name:lower():find("rayfield") then
-                v:Destroy()
-            end
-        end)
+if typeof(gethui) == "function" then
+    local ok, result = pcall(gethui)
+    if ok and result then
+        guiContainer = result
+    end
+end
+
+guiContainer = guiContainer or game:GetService("CoreGui")
+
+for _, gui in ipairs(guiContainer:GetChildren()) do
+    if gui:IsA("ScreenGui") then
+        gui:Destroy()
     end
 end
 
@@ -17,7 +22,7 @@ local window = Rayfield:CreateWindow({
     subtitle = "Click a button and it will launch the script.",
 })
 
-local loader = window:CreateTab({ name = "Loader", icon = "settings" })
+local loader = window:CreateTab({ name = "Loader", icon = "93364949241311" })
 
 loader:CreateButton({
     name = "Residence Massacre",
