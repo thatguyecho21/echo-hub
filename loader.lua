@@ -11,7 +11,7 @@ local configName = "Default"
 local Window = WindUI:CreateWindow({
     Title = "My Hub",
     Icon = "star",
-    Theme = "Midnight",
+    Theme = "Dark",
     Folder = "MyHub",
     HideSearchBar = false
 })
