@@ -143,11 +143,11 @@ Settings:Dropdown({
     end,
 })
 
---// Notifications \\--
+--// Notification \\--
 
 WindUI:Notify({
-    Title = "Hub Loaded",
-    Content = "Welcome! My Hub is ready.",
+    Title = "Success",
+    Content = "Script is loaded. Welcome.",
     Icon = "solar:bell-bold",
     Duration = 3,
 })
