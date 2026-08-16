@@ -3,7 +3,7 @@ local Rayfield = loadstring(game:HttpGet("https://sirius.menu/gen2"))()
 local window = Rayfield:CreateWindow({
     name = "ECHO HUB | LOADER",
     subtitle = "Click a button and it will launch the script.",
-    theme = "ember",
+    theme = "default",
 })
 
 local loader = window:CreateTab({ name = "Loader", icon = "settings" })
