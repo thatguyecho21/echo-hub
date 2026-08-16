@@ -12,7 +12,6 @@ local Tab = Window:Tab({
     Icon = "home",
 })
 
--- Toggle
 Tab:Toggle({
     Title = "Enable Feature",
     Value = false,
@@ -21,7 +20,6 @@ Tab:Toggle({
     end,
 })
 
--- Button
 Tab:Button({
     Title = "Run Action",
     Icon = "play",
@@ -30,9 +28,6 @@ Tab:Button({
     end,
 })
 
-Tab:Space()
-
--- Slider
 Tab:Slider({
     Title = "Walk Speed",
     Step = 1,
@@ -46,9 +41,6 @@ Tab:Slider({
     end,
 })
 
-Tab:Space()
-
--- Dropdown
 Tab:Dropdown({
     Title = "Select Team",
     Values = { "Red", "Blue", "Green" },
@@ -57,6 +49,8 @@ Tab:Dropdown({
         print("Team selected:", selectedValue)
     end,
 })
+
+
 
 WindUI:Notify({
     Title = "Hub Loaded",
