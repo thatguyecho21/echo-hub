@@ -1,29 +1,68 @@
-if _G.Rayfield then
-    _G.Rayfield:Destroy()
-    _G.Rayfield = nil
-end
+local WindUI = loadstring(game:HttpGet("https://raw.githubusercontent.com/Footagesus/WindUI/main/dist/main.lua"))()
 
-local Rayfield = loadstring(game:HttpGet("https://sirius.menu"))()
-_G.Rayfield = Rayfield
-
-local window = Rayfield:CreateWindow({
-    name = "ECHO HUB | LOADER",
-    subtitle = "Click a button and it will launch the script.",
+local Window = WindUI:CreateWindow({
+    Title = "My Hub",
+    Icon = "star",
+    Theme = "Dark",
+    Folder = "MyHub",
 })
 
-local loader = window:CreateTab({ 
-    name = "Loader", 
-    icon = false 
+local Tab = Window:Tab({
+    Title = "Main",
+    Icon = "home",
 })
 
-loader:CreateButton({
-    name = "Residence Massacre",
-    callback = function()
-        local success, err = pcall(function()
-            loadstring(game:HttpGet("https://githubusercontent.com"))()
-        end)
-        if not success then
-            warn("Failed to load script: " .. tostring(err))
-        end
+-- Toggle
+Tab:Toggle({
+    Title = "Enable Feature",
+    Value = false,
+    Callback = function(state)
+        print("Feature enabled:", state)
     end,
+})
+
+Tab:Space()
+
+-- Button
+Tab:Button({
+    Title = "Run Action",
+    Icon = "play",
+    Callback = function()
+        print("Button clicked")
+    end,
+})
+
+Tab:Space()
+
+-- Slider
+Tab:Slider({
+    Title = "Walk Speed",
+    Step = 1,
+    Value = {
+        Min = 16,
+        Max = 100,
+        Default = 16,
+    },
+    Callback = function(value)
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = value
+    end,
+})
+
+Tab:Space()
+
+-- Dropdown
+Tab:Dropdown({
+    Title = "Select Team",
+    Values = { "Red", "Blue", "Green" },
+    Value = 1,
+    Callback = function(selectedValue)
+        print("Team selected:", selectedValue)
+    end,
+})
+
+WindUI:Notify({
+    Title = "Hub Loaded",
+    Content = "Welcome! My Hub is ready.",
+    Icon = "solar:bell-bold",
+    Duration = 3,
 })
