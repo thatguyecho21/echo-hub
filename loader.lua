@@ -1,5 +1,13 @@
-if getgenv().OldRayfield then
-    getgenv().OldRayfield:Destroy()
+local CoreGui = game:GetService("CoreGui")
+
+for _, v in ipairs(CoreGui:GetChildren()) do
+    if v:IsA("ScreenGui") then
+        pcall(function()
+            if v:FindFirstChild("Rayfield") or v.Name:lower():find("rayfield") then
+                v:Destroy()
+            end
+        end)
+    end
 end
 
 local Rayfield = loadstring(game:HttpGet("https://sirius.menu/gen2"))()
