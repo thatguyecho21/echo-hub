@@ -1,5 +1,5 @@
 -- Load Wind UI Framework from official community CDN
-local WindUI = loadstring(game:HttpGet("https://vercel.app"))()
+local WindUI = loadstring(game:HttpGet("https://raw.githubusercontent.com/Footagesus/WindUI/main/dist/main.lua"))()
 
 local Window = WindUI:CreateWindow({
     Title = "SAB Dynamic Teleport",
