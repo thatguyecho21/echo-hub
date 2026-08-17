@@ -76,13 +76,12 @@ Tab:Toggle({
     end,
 })
 
-Tab:Button({
-    Title = "Run Action",
-    Icon = "play",
-    Callback = function()
-        print("Button clicked")
-    end,
+Tabs.Main:Paragraph({
+    Title = "Important Information",
+    Desc = "This is a paragraph description that displays standard text inside the section.",
+    Icon = "info", -- Optional Lucide icon name
 })
+
 
 Tab:Slider({
     Title = "Walk Speed",
