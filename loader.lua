@@ -78,6 +78,7 @@ Tab:Toggle({
 
 Tab:Button({
     Title = "Run Action",
+    Desc = "if im run red :))"
     Icon = "play",
     Callback = function()
         print("Button clicked")
