@@ -76,7 +76,7 @@ Tab:Toggle({
     end,
 })
 
-Tabs.Main:Paragraph({
+Tab:Paragraph({
     Title = "Important Information",
     Desc = "This is a paragraph description that displays standard text inside the section.",
     Icon = "info", -- Optional Lucide icon name
