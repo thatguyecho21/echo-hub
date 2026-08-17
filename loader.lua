@@ -70,7 +70,6 @@ local Settings = Window:Tab({
 
 Tab:Toggle({
     Title = "Enable Feature",
-    Desc = "Hello",
     Value = false,
     Callback = function(state)
         print("Feature enabled:", state)
