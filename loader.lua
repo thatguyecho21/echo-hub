@@ -68,13 +68,11 @@ local Settings = Window:Tab({
 
 --// Main \\--
 
-Tab:Toggle({
-    Title = "Enable Feature",
-    Value = false,
-    Callback = function(state)
-        print("Feature enabled:", state)
-    end,
+Tab:Paragraph({
+    Title = "Server Info",
+    Desc = "This displays information about your game session."
 })
+
 
 Tab:Button({
     Title = "Run Action",
