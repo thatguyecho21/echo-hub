@@ -169,16 +169,6 @@ Settings:Button({
     end
 })
 
-Settings:Section({ Title = "Theme Picker" })
-
-Settings:Dropdown({
-    Title  = "Theme",
-    Values = { "Dark", "Light", "Rose", "Plant", "Red", "Indigo", "Sky", "Violet", "Amber", "Midnight", "Crimson", "Mellowsi", "Rainbow" },
-    Value  = 1,
-    Callback = function(selected)
-        WindUI:SetTheme(selected)
-    end,
-})
 
 --// Notification \\--
 
