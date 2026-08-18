@@ -8,7 +8,7 @@ local Window = WindUI:CreateWindow({
     Folder = "TeleportConfig",
     Icon = "sfsymbols:bolt",
     IconSize = 50,
-    HideSearchBar = false,
+    HideSearchBar = true,
     Theme = "Dark"
 })
 
@@ -24,6 +24,7 @@ local player = game.Players.LocalPlayer
 -- 5. Add the Stage 1 Teleport Button
 Tab:Button({
     Title = "Teleport to Stage 1 Win",
+    Desc = "Instantly snaps you to the Stage1 NormalWin model",
     Callback = function()
         -- Direct path to your model
         local targetModel = workspace.Map.World1.Stages.Stage1.NormalWin
