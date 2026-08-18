@@ -81,8 +81,8 @@ Auto:Toggle({
         if state then
             task.spawn(function()
                 while autoWin do
-                    if world1 and player.Character and targetModel then
-                        player.Character:PivotTo(targetModel:GetPivot())
+                    if world1 and player.Character then
+                        player.Character:PivotTo(world1:GetPivot())
                     else
                         warn("Target model or Character not found!")
                         break
