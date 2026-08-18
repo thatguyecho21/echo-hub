@@ -29,7 +29,9 @@
 
 ]]
 
-
+if not game:IsLoaded() then
+    game.Loaded:Wait()
+end
 
 --// Loader \\--
 
@@ -38,15 +40,17 @@ local WindUI = loadstring(game:HttpGet("https://raw.githubusercontent.com/Footag
 --// Variables \\--
 
 local player = game.Players.LocalPlayer
+local world1 = workspace.Map.World1.Stages.Stage9.NormalWin
+local autoWin = false
 
 --// Window \\--
 
 local Window = WindUI:CreateWindow({
     Title = "ECHO HUB",
-    Author = "[GAME NAME]",
+    Author = "+1 Speed Monkey Escape",
     Icon = "shield-user",
     Theme = "Midnight",
-    Folder = "MyHub",
+    Folder = "+1_Speed_Monkey_Escape",
     HideSearchBar = false,
     User = {
         Enabled = true,
@@ -56,9 +60,9 @@ local Window = WindUI:CreateWindow({
 
 --// Tabs \\--
 
-local Tab = Window:Tab({
-    Title = "Main",
-    Icon = "list",
+local Auto = Window:Tab({
+    Title = "Auto",
+    Icon = "refresh-ccw",
 })
 
 local Settings = Window:Tab({
@@ -66,26 +70,26 @@ local Settings = Window:Tab({
     Icon = "settings",
 })
 
---// Main \\--
+--// Auto \\--
 
-Tab:Toggle({
-    Title = "Enable Feature",
+Auto:Toggle({
+    Title = "Auto Win",
+    Desc = "[ONLY WORKS FOR WORLD 1]",
     Value = false,
     Callback = function(state)
-        print("Feature enabled:", state)
-    end,
-})
-
-Tab:Button({
-    Title = "Teleport to Stage 1 Win",
-    Desc = "Instantly snaps you to the Stage1 NormalWin model",
-    Callback = function()
-        local targetModel = workspace.Map.World1.Stages.Stage1.NormalWin
-        
-        if targetModel and player.Character then
-            player.Character:PivotTo(targetModel:GetPivot())
-        else
-            warn("Target model or Character not found!")
+        autoWin = state
+        if state then
+            task.spawn(function()
+                while autoWin do
+                    if world1 and player.Character and targetModel then
+                        player.Character:PivotTo(targetModel:GetPivot())
+                    else
+                        warn("Target model or Character not found!")
+                        break
+                    end
+                    task.wait(1)
+                end
+            end)
         end
     end
 })
