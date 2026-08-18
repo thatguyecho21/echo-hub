@@ -37,7 +37,7 @@ local WindUI = loadstring(game:HttpGet("https://raw.githubusercontent.com/Footag
 
 --// Variables \\--
 
-
+local player = game.Players.LocalPlayer
 
 --// Window \\--
 
