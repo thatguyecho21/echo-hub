@@ -1,5 +1,5 @@
 -- 1. Load the WindUI Library
-local WindUI = loadstring(game:HttpGet("https://githubusercontent.com"))()
+local WindUI = loadstring(game:HttpGet("https://raw.githubusercontent.com/Footagesus/WindUI/main/dist/main.lua"))()
 
 -- 2. Create the Main Window
 local Window = WindUI:CreateWindow({
