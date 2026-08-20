@@ -146,7 +146,7 @@ local function FullBright()
 end
 
 
-local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/jensonhirst/Orion/main/source')))()
 local Window = OrionLib:MakeWindow({Name = "RM Killer", HidePremium = false, SaveConfig = true, ConfigFolder = "MineSim", IntroText = "je manos te tudiavaa"})
 
 
