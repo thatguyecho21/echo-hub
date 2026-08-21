@@ -66,7 +66,7 @@ local Window = WindUI:CreateWindow({
 })
 
 Window:Tag({
-    Title = "v0.1.2",
+    Title = "v0.2.0",
     Icon = "wrench",
     Color = Color3.fromHex("#ff0000"),
     Border = true,
@@ -89,18 +89,8 @@ local N3 = Window:Tab({
     Icon = "trees",
 })
 
-local SH = Window:Tab({
-    Title = "Spirit Helper",
-    Icon = "ghost",
-})
-
-local MI = Window:Tab({
-    Title = "Mansion Incident",
-    Icon = "ghost",
-})
-
-local BU = Window:Tab({
-    Title = "The Bunker",
+local Memories = Window:Tab({
+    Title = "Memories",
     Icon = "ghost",
 })
 
@@ -121,17 +111,37 @@ N2:Section({ Title = "COMING SOON" })
 
 N3:Section({ Title = "COMING SOON" })
 
---// Spirit Helper \\--
+--// Memories \\--
 
-SH:Section({ Title = "COMING SOON" })
+Memories:Section({ Title = "Spirit Helper" })
 
---// Mansion Incident \\--
+Memories:Button({
+  Title = "Auto Win",
+  Desc = "Don't move. Let the script do it.",
+  Callback = function()
+         print("TEST")
+end,
+})
 
-MI:Section({ Title = "COMING SOON" })
+Memories:Section({ Title = "Mansion Incident" })
 
---// The Bunker \\--
+Memories:Button({
+  Title = "Auto Win",
+  Desc = "Don't move. Let the script do it.",
+  Callback = function()
+         print("TEST")
+end,
+})
 
-BU:Section({ Title = "COMING SOON" })
+Memories:Section({ Title = "The Bunker" })
+
+Memories:Button({
+  Title = "Auto Win",
+  Desc = "Don't move. Let the script do it.",
+  Callback = function()
+         print("TEST")
+end,
+})
 
 --// Settings \\--
 
