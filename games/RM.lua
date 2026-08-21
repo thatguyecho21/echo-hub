@@ -27,7 +27,7 @@
              ███             ███             ███             ███             ███             ███             ██
 
                                                 Made by: echo :)
-                                                     v0.3.0
+                                                     v0.3.1
                                                      [BETA]
 
 ]]
@@ -38,9 +38,7 @@ end
 
 --// Services & Variables \\--
 
-local RunService = game:GetService("RunService")
 
-local espConnection = nil
 
 --// Functions \\--
 
@@ -66,7 +64,7 @@ local Window = WindUI:CreateWindow({
 })
 
 Window:Tag({
-    Title = "v0.3.0",
+    Title = "v0.3.1",
     Icon = "wrench",
     Color = Color3.fromHex("#4e4e4f"),
     Border = true,
