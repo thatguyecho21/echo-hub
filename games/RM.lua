@@ -66,7 +66,7 @@ local Window = WindUI:CreateWindow({
 })
 
 Window:Tag({
-    Title = "v0.1.0",
+    Title = "v0.1.2",
     Icon = "wrench",
     Color = Color3.fromHex("#ff0000"),
     Border = true,
