@@ -1,3 +1,7 @@
+> [!NOTE]
+> This is work in progress, and I am adding more games over time.
+
+
 # ECHO HUB
 A little project I made. Might be very shitty, but at least it gets things done.
 Fully open source, because who the hell like obfuscated code? Absolutely no one.
@@ -11,7 +15,3 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/thatguyecho21/echo-hu
 ```
 https://github.com/thatguyecho21/echo-hub/tree/main/games
 ```
-
-
-> [!NOTE]
-> This is work in progress, and I am adding more games over time.
