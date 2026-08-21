@@ -12,6 +12,10 @@ UI Library: [WindUI](https://github.com/Footagesus/WindUI/tree/main)
 
 ## Loader
 You can load the script by copying it from [here](https://raw.githubusercontent.com/thatguyecho21/echo-hub/refs/heads/main/loader.lua) or by executing the code below.
+
+Depending on which game you play, it loads that script.
+
+If it is an unsupported game, it won't load a script.
 ```lua
 loadstring(game:HttpGet("https://raw.githubusercontent.com/thatguyecho21/echo-hub/refs/heads/main/loader.lua"))()
 ```
