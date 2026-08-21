@@ -27,4 +27,4 @@ You can find the games it supports below.
 As I said before, this is WIP. I am adding more games over time.
 
 
-- [Residence Massacre (v0.1.0)](https://www.roblox.com/games/14437001043/Residence-Massacre)
+- [Residence Massacre (v0.2.1)](https://www.roblox.com/games/14437001043/Residence-Massacre)
