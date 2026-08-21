@@ -1,7 +1,16 @@
-# echo-hub
-> [!NOTE]
-> This is work in progress, so don't expect much (or anything at all.)
+# ECHO HUB
+A little project I made. Might be very shitty, but at least it gets things done.
+Fully open source, because who the hell like obfuscated code? Absolutely no one.
 
-> [!WARNING]
-> If you get caught and banned, I do not take liability.
-> (Although it is very rare unless a ban wave happens.)
+## Loader
+```lua
+loadstring(game:HttpGet("https://raw.githubusercontent.com/thatguyecho21/echo-hub/refs/heads/main/loader.lua"))()
+```
+
+## Games
+```
+https://github.com/thatguyecho21/echo-hub/tree/main/games
+```
+
+> [!NOTE]
+> This is work in progress, and I am adding more games over time.
