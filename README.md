@@ -7,6 +7,8 @@ A little project I made. Might be very shitty, but at least it gets things done.
 
 Fully open source, because who the hell like obfuscated code? Absolutely no one.
 
+UI Library: [WindUI](https://github.com/Footagesus/WindUI/tree/main)
+
 
 ## Loader
 You can load the script by copying it from [here](https://raw.githubusercontent.com/thatguyecho21/echo-hub/refs/heads/main/loader.lua) or by executing the code below.
