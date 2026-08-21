@@ -16,6 +16,6 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/thatguyecho21/echo-hu
 
 
 ## Games
-You can find the games it supports [here](https://github.com/thatguyecho21/echo-hub/tree/main/games), but as I said at the top, it is WIP.
+You can find the games it supports [here](https://github.com/thatguyecho21/echo-hub/tree/main/games), or at the list below.
 
-I am adding more games over time.
+As I said before, this is WIP. I am adding more games over time.
