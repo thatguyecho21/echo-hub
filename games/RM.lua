@@ -141,7 +141,7 @@ Settings:Section({ Title = "COMING SOON" })
 
 WindUI:Notify({
     Title = "Success!",
-    Content = "Script is loaded.",
+    Content = "Script has loaded.",
     Icon = "bell-ring",
     Duration = 2,
 })
