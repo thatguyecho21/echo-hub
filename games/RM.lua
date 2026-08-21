@@ -27,7 +27,7 @@
              ███             ███             ███             ███             ███             ███             ██
 
                                                 Made by: echo :)
-                                                     v0.1.0
+                                                     v0.3.0
                                                      [BETA]
 
 ]]
@@ -66,7 +66,7 @@ local Window = WindUI:CreateWindow({
 })
 
 Window:Tag({
-    Title = "v0.2.1",
+    Title = "v0.3.0",
     Icon = "wrench",
     Color = Color3.fromHex("#4e4e4f"),
     Border = true,
@@ -117,9 +117,16 @@ Memories:Section({ Title = "Spirit Helper" })
 
 Memories:Button({
   Title = "Auto Win",
-  Desc = "Don't move. Let the script do it.",
+  Desc = "ACTIVATE IN SPIRIT MINIGAME.",
   Callback = function()
-         print("TEST")
+        print("TEST")
+
+    WindUI:Notify({
+    Title = "Spirit Helper",
+    Content = "DON'T MOVE. LET THE SCRIPT DO IT.",
+    Icon = "bell-ring",
+    Duration = 2,
+})
 end,
 })
 
@@ -127,9 +134,16 @@ Memories:Section({ Title = "Mansion Incident" })
 
 Memories:Button({
   Title = "Auto Win",
-  Desc = "Don't move. Let the script do it.",
+  Desc = "ACTIVATE IN MANSION MINIGAME.",
   Callback = function()
-         print("TEST")
+        print("TEST")
+
+    WindUI:Notify({
+    Title = "Mansion Incident",
+    Content = "DON'T MOVE. LET THE SCRIPT DO IT.",
+    Icon = "bell-ring",
+    Duration = 2,
+})
 end,
 })
 
@@ -137,9 +151,16 @@ Memories:Section({ Title = "The Bunker" })
 
 Memories:Button({
   Title = "Auto Win",
-  Desc = "Don't move. Let the script do it.",
+  Desc = "ACTIVATE IN BUNKER MINIGAME.",
   Callback = function()
-         print("TEST")
+        print("TEST")
+
+    WindUI:Notify({
+    Title = "The Bunker",
+    Content = "DON'T MOVE. LET THE SCRIPT DO IT.",
+    Icon = "bell-ring",
+    Duration = 2,
+})
 end,
 })
 
