@@ -19,3 +19,6 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/thatguyecho21/echo-hu
 You can find the games it supports [here](https://github.com/thatguyecho21/echo-hub/tree/main/games), or at the list below.
 
 As I said before, this is WIP. I am adding more games over time.
+
+
+- [Residence Massacre](https://www.roblox.com/games/14437001043/Residence-Massacre)
