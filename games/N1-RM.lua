@@ -27,13 +27,31 @@
              ███             ███             ███             ███             ███             ███             ██
 
                                                 Made by: echo :)
-                                                     v0.4.0
+                                                     v0.1.0
                                                      [BETA]
 
 ]]
 
+--// Loading Check \\--
+
 if not game:IsLoaded() then
     game.Loaded:Wait()
+end
+
+--// Scripts \\--
+
+local WindUI = loadstring(game:HttpGet("https://raw.githubusercontent.com/Footagesus/WindUI/main/dist/main.lua"))()
+
+--// Lobby Checker \\--
+
+if game.GameId == 14437001043 then
+    WindUI:Notify({
+        Title = "ECHO HUB",
+        Content = "Get in a game first!",
+        Duration = 3
+    })
+
+    return
 end
 
 --// Services & Variables \\--
@@ -43,7 +61,7 @@ local RunService = game:GetService("RunService")
 local workspace = game:GetService("Workspace")
 
 local plr = Players.LocalPlayer
-local char = plr.Character
+local char = plr.Character or plr.CharacterAdded:Wait()
 local overdrive = char.Sprint.Overdrive
 local breath = char.Breath
 local PlayerESP = false
@@ -52,6 +70,22 @@ local InfStam = false
 local InfO2 = false
 
 --// Functions \\--
+
+local function button(tab, t, d, c)
+    tab:Button({
+        Title = t,
+        Desc = d,
+        Callback = c
+    })
+end
+
+local function toggle(tab, t, d, c)
+    tab:Toggle({
+        Title = t,
+        Desc = d,
+        Callback = c
+    })
+end
 
 local function highlightPlayers()
     for _, player in ipairs(Players:GetPlayers()) do
@@ -151,18 +185,14 @@ task.spawn(function()
     end
 end)
 
---// Loader \\--
-
-local WindUI = loadstring(game:HttpGet("https://raw.githubusercontent.com/Footagesus/WindUI/main/dist/main.lua"))()
-
 --// Window \\--
 
 local Window = WindUI:CreateWindow({
     Title = "ECHO HUB",
-    Author = "Residence Massacre",
+    Author = "Residence Massacre | Night 1",
     Icon = "shield-user",
     Theme = "Midnight",
-    Folder = "Residence_Massacre",
+    Folder = "Residence_Massacre_N1",
     HideSearchBar = false,
     User = {
         Enabled = true,
@@ -171,7 +201,7 @@ local Window = WindUI:CreateWindow({
 })
 
 Window:Tag({
-    Title = "v0.4.0",
+    Title = "v0.1.0",
     Icon = "wrench",
     Color = Color3.fromHex("#4e4e4f"),
     Border = true,
@@ -179,14 +209,14 @@ Window:Tag({
 
 --// Tabs \\--
 
-local Nights = Window:Tab({
-    Title = "Nights",
-    Icon = "moon",
+local Main = Window:Tab({
+    Title = "Main",
+    Icon = "house",
 })
 
-local Memories = Window:Tab({
-    Title = "Memories",
-    Icon = "ghost",
+local Teleports = Window:Tab({
+    Title = "Teleports",
+    Icon = "map-pin",
 })
 
 local Settings = Window:Tab({
@@ -194,102 +224,49 @@ local Settings = Window:Tab({
     Icon = "settings",
 })
 
---// Nights \\--
+--// Main \\--
 
-Nights:Section({ Title = "Global (ALL NIGHTS)" })
+Main:Section({ Title = "Main" })
 
-Nights:Toggle({
-  Title = "Mutant ESP",
-  Desc = "Highlights the Mutant.",
-  Callback = function(state)
+toggle(Main, "Mutant ESP", "Highlights the Mutant", function(state)
     MutantESP = state
-  end,
-})
+end)
 
-Nights:Toggle({
-  Title = "Player ESP",
-  Desc = "Highlights all Players in the server.",
-  Callback = function(state)
+toggle(Main, "Player ESP", "Highlights all Players", function(state)
     PlayerESP = state
-  end,
-})
+end)
 
-Nights:Toggle({
-  Title = "Infinite Stamina",
-  Desc = "Your stamina never runs out!",
-  Callback = function(state)
+toggle(Main, "Infinite Stamina", "You never run out of stamina", function(state)
     InfStam = state
-  end,
-})
+end)
 
-Nights:Section({ Title = "Night 1" })
-
-Nights:Toggle({
-  Title = "Infinite Oxygen",
-  Desc = "Your oxygen never runs out!",
-  Callback = function(state)
+toggle(Main, "Infinite Oxygen", "You never run out of oxygen", function(state)
     InfO2 = state
-  end,
-})
+end)
 
-Nights:Section({ Title = "Night 2" })
+--// Teleports \\--
 
-Nights:Section({ Title = "Night 3" })
+Teleports:Section({ Title = "Teleports" })
 
---// Memories \\--
-
-Memories:Section({ Title = "Global (ALL MEMORIES)" })
-
-Memories:Section({ Title = "Spirit Helper" })
-
-Memories:Button({
-  Title = "Auto Win",
-  Desc = "ACTIVATE IN SPIRIT MINIGAME.",
-  Callback = function()
+button(Teleports, "SafeSpot", "TP to Safespot", function()
     print("TEST")
+end)
 
-    WindUI:Notify({
-    Title = "Spirit Helper",
-    Content = "DON'T MOVE. LET THE SCRIPT DO IT.",
-    Icon = "bell-ring",
-    Duration = 2,
-})
-end,
-})
-
-Memories:Section({ Title = "Mansion Incident" })
-
-Memories:Button({
-  Title = "Auto Win",
-  Desc = "ACTIVATE IN MANSION MINIGAME.",
-  Callback = function()
+button(Teleports, "SafeSpot", "TP to Safespot", function()
     print("TEST")
+end)
 
-    WindUI:Notify({
-    Title = "Mansion Incident",
-    Content = "DON'T MOVE. LET THE SCRIPT DO IT.",
-    Icon = "bell-ring",
-    Duration = 2,
-})
-end,
-})
-
-Memories:Section({ Title = "The Bunker" })
-
-Memories:Button({
-  Title = "Auto Win",
-  Desc = "ACTIVATE IN BUNKER MINIGAME.",
-  Callback = function()
+button(Teleports, "SafeSpot", "TP to Safespot", function()
     print("TEST")
+end)
 
-    WindUI:Notify({
-    Title = "The Bunker",
-    Content = "DON'T MOVE. LET THE SCRIPT DO IT.",
-    Icon = "bell-ring",
-    Duration = 2,
-})
-end,
-})
+button(Teleports, "SafeSpot", "TP to Safespot", function()
+    print("TEST")
+end)
+
+button(Teleports, "SafeSpot", "TP to Safespot", function()
+    print("TEST")
+end)
 
 --// Settings \\--
 
