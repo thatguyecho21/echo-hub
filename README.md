@@ -17,7 +17,7 @@ Depending on which game you play, it loads that script.
 
 If it is an unsupported game, it won't load a script.
 ```lua
-loadstring(game:HttpGet("https://raw.githubusercontent.com/thatguyecho21/echo-hub/refs/heads/main/loader.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/thatguyecho21/echo-hub/main/loader.lua"))()
 ```
 
 
