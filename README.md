@@ -11,7 +11,7 @@ UI Library: [WindUI](https://github.com/Footagesus/WindUI)
 
 
 ## Loader
-You can load the script by copying it from [here](https://raw.githubusercontent.com/thatguyecho21/echo-hub/refs/heads/main/loader.lua) or by executing the code below.
+You can load the script by copying it from [here](https://raw.githubusercontent.com/thatguyecho21/echo-hub/main/loader.lua) or by executing the code below.
 
 Depending on which game you play, it loads that script.
 
