@@ -7,7 +7,7 @@ A little project I made. Might be very shitty, but at least it gets things done.
 
 Fully open source, because who the hell likes obfuscated code? Absolutely no one.
 
-UI Library: [WindUI](https://github.com/Footagesus/WindUI/tree/main)
+UI Library: [WindUI](https://github.com/Footagesus/WindUI)
 
 
 ## Loader
