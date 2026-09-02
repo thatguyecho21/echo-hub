@@ -1,3 +1,6 @@
+local WindUI = loadstring(game:HttpGet("https://raw.githubusercontent.com/Footagesus/WindUI/main/dist/main.lua"))()
+local char = plr.Character or plr.CharacterAdded:Wait()
+
 function Noclip(state)
     for _, part in ipairs(char:GetDescendants()) do
         if part:IsA("BasePart") then
