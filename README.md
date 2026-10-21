@@ -1,6 +1,5 @@
-> [!NOTE]
-> This is work in progress, and I am adding more games over time.
-
+> [!IMPORTANT]
+> going away from it, coming back maybe
 
 # ECHO HUB
 A little project I made. Might be very shitty, but at least it gets things done.
